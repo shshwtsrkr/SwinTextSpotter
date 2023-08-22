@@ -108,7 +108,6 @@ def setup(args):
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
     cfg.freeze()
-    cfg.MODEL.REC_HEAD.BATCH_SIZE=1
     default_setup(cfg, args)
     return cfg
 
