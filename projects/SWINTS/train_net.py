@@ -107,6 +107,8 @@ def setup(args):
     add_SWINTS_config(cfg)
     cfg.merge_from_file(args.config_file)
     cfg.merge_from_list(args.opts)
+    cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE=1
+    cfg.MODEL.RPN.BATCH_SIZE_PER_IMAGE=1
     cfg.freeze()
     default_setup(cfg, args)
     return cfg
