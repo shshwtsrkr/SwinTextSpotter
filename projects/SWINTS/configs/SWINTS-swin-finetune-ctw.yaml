@@ -7,7 +7,7 @@ MODEL:
   REC_HEAD:
       POOLER_RESOLUTION: (16,48)
       RESOLUTION: (32, 96)
-      BATCH_SIZE: 128
+      BATCH_SIZE: 1
 DATASETS:
   TRAIN: ("ctw1500_train",)
   TEST:  ("ctw1500_test",)
