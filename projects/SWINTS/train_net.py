@@ -106,6 +106,7 @@ def setup(args):
     cfg = get_cfg()
     add_SWINTS_config(cfg)
     cfg.merge_from_file(args.config_file)
+    cfg.DATALOADER.NUM_WORKERS = 1
     cfg.merge_from_list(args.opts)
     cfg.MODEL.ROI_HEADS.BATCH_SIZE_PER_IMAGE=1
     cfg.MODEL.RPN.BATCH_SIZE_PER_IMAGE=1
